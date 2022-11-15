@@ -1,0 +1,25 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 20px;
+}
+.innerContainer {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.innerContainer > div {
+  display: flex;
+  align-items: center;  
+  gap: 16px;
+}
+.innerContainer img {
+  display: flex;
+  padding: 16px;
+  width: 100px;
+  height: 100px;
+}

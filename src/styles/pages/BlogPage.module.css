@@ -1,0 +1,14 @@
+.container {
+  width: fit-content;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0px 16px;
+}
+.section {
+  width: 100vw;
+  overflow: hidden;
+  cursor: pointer;
+}

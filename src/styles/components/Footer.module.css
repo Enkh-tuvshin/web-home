@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  background-color: #252b3b;
+  padding: 48px 0px;
+}
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
