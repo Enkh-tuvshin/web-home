@@ -37,7 +37,7 @@ export const Footer = () => {
               size="lg"
               variant="light"
             >
-              Email
+              Email &rarr;
             </Button>
           </div>
         </div>

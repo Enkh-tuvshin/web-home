@@ -3,13 +3,13 @@ import { Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../providers/ThemeProvider";
 import styles from "../styles/components/Navbar.module.css";
-import Form from 'react-bootstrap/Form';
+import Form from "react-bootstrap/Form";
 
 const routes = [
   { name: "Home", to: "/" },
   { name: "Services", to: "blog" },
-  { name: "Contacts", to: "post" },
-  { name: "Log in", to: "/home" }
+  { name: "Contacts", to: "home" },
+  { name: "Log in", to: "/post" },
 ];
 
 export const Navbar = () => {
@@ -26,11 +26,14 @@ export const Navbar = () => {
         <div className={styles.innerContainer}>
           {/* Logo */}
 
-        <img src="https://thumbs.dreamstime.com/b/people-word-team-icon-sign-logo-white-background-people-word-team-icon-sign-logo-148212800.jpg" />
+          <img src="https://thumbs.dreamstime.com/b/people-word-team-icon-sign-logo-white-background-people-word-team-icon-sign-logo-148212800.jpg" />
 
           {/* Routes */}
 
           <div>
+            <Form>
+              <Form.Check type="switch" id="custom-switch" />
+            </Form>
             {routes.map(({ name, to }) => (
               <Link key={name} to={to}>
                 {name}

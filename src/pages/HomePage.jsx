@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Button, Card, Container } from "react-bootstrap";
 import styles from "../styles/pages/HomePage.module.css";
 import { FaStar } from "react-icons/fa";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const baseUrl = "https://dummyapi.io/data/v1";
 
@@ -56,7 +57,16 @@ export const HomePage = () => {
 
       <div className={styles.sectionFour}>
         <Container>
-          <div className={styles.Card}></div>
+          <div className="arigmat">
+            <h1>Your Hub for teamwork</h1>
+            <p>
+              Give everyone you work with—inside and outside your company—a more
+              productive way to stay in sync. Respond faster with emoji, keep
+              conversations focused in channels, and simplify all your
+              communication into one place.
+            </p>
+            <a>Learn more</a>
+          </div>
         </Container>
       </div>
 
@@ -64,6 +74,7 @@ export const HomePage = () => {
 
       <div className={styles.sectionTwo}>
         <Container>
+          <h1>What people say about us</h1>
           <div className={styles.cards}>
             <div
               style={{
@@ -76,18 +87,30 @@ export const HomePage = () => {
               ))}
             </div>
           </div>
-          <Button
-            style={{ position: "relative", bottom: 360, left: 575 }}
-            onClick={goRight}
-          >
-            Left
-          </Button>
-          <Button
-            style={{ position: "relative", bottom: 360, left: 625 }}
+          <div
+            style={{
+              position: "relative",
+              width: "fit-content",
+              bottom: 360,
+              left: 550,
+              cursor: "pointer",
+            }}
             onClick={goLeft}
           >
-            Right
-          </Button>
+            &#8592;
+          </div>
+          <div
+            style={{
+              width: "fit-content",
+              position: "relative",
+              bottom: 383,
+              left: 650,
+              cursor: "pointer",
+            }}
+            onClick={goRight}
+          >
+            &rarr;
+          </div>
         </Container>
       </div>
 
