@@ -1,3 +1,6 @@
 export const PostPage = () => {
-  return <>Post</>;
+  return (
+    // section1
+    <div>Post</div>
+  );
 };

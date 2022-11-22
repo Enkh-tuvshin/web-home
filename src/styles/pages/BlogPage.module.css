@@ -1,20 +1,16 @@
 .container {
-  width: fit-content;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 0px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 100px 0px;
+  gap: 16px
 }
+
 .section {
-  width: 100vw;
   overflow: hidden;
   cursor: pointer;
 }
-.adad {
-  width: 300px;
-  height: 300px;
-  border: 1px solid black;
-  border-radius: 10px;
+
+.Img {
+  width: 40px;
+  height: 40px;
 }

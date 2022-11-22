@@ -7,8 +7,8 @@ import Form from "react-bootstrap/Form";
 
 const routes = [
   { name: "Home", to: "/" },
-  { name: "Services", to: "blog" },
-  { name: "Contacts", to: "home" },
+  { name: "Services", to: "/blog" },
+  { name: "Contacts", to: "/home" },
   { name: "Log in", to: "/post" },
 ];
 
@@ -38,6 +38,7 @@ export const Navbar = () => {
               <Link key={name} to={to}>
                 {name}
               </Link>
+
             ))}
             <Button variant="outline-secondary">Get Access</Button>
           </div>

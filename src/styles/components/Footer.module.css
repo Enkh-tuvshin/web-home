@@ -2,8 +2,6 @@
   width: 100%;
   background-color: #252b3b;
   padding: 48px 0px;
-  position: absolute;
-  top: 100%;
 }
 .flexContainer {
   display: flex;

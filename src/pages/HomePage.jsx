@@ -4,6 +4,9 @@ import { Button, Card, Container } from "react-bootstrap";
 import styles from "../styles/pages/HomePage.module.css";
 import { FaStar } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
+import image from "../assets/images/ooto Meetings 1.png";
+import image2 from "../assets/images/Mask group.png";
+import image3 from "../assets/images/brooke-cagle-JBwcenOuRCg-unsplash (1) 1.png";
 
 const baseUrl = "https://dummyapi.io/data/v1";
 
@@ -54,18 +57,74 @@ export const HomePage = () => {
       </div>
 
       {/* Section 4 */}
-
       <div className={styles.sectionFour}>
         <Container>
-          <div className="arigmat">
-            <h1>Your Hub for teamwork</h1>
-            <p>
-              Give everyone you work with—inside and outside your company—a more
-              productive way to stay in sync. Respond faster with emoji, keep
-              conversations focused in channels, and simplify all your
-              communication into one place.
-            </p>
-            <a>Learn more</a>
+          <div className={styles.top}>
+            <div>
+              <div className={styles.header}>
+                <h1>Your Hub for teamwork</h1>
+                <p>
+                  Give everyone you work with—inside and outside your company—a
+                  more productive way to stay in sync. Respond faster with
+                  emoji, keep conversations focused in channels, and simplify
+                  all your communication into one place.
+                </p>
+                <div>
+                  <div className={styles.learn}>
+                    <Button variant="link">Learn more</Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.lane}>
+              <img src={image} />
+            </div>
+          </div>
+
+          {/* a */}
+
+          <div className={styles.top2}>
+            <div className={styles.lane}>
+              <img src={image2} />
+            </div>
+            <div className={styles.header2}>
+              <h1>Simple task management</h1>
+              <p>
+                Give everyone you work with—inside and outside your company—a
+                more productive way to stay in sync. Respond faster with emoji,
+                keep conversations focused in channels, and simplify all your
+                communication into one place.
+              </p>
+              <div>
+                <div className={styles.learn}>
+                  <Button variant="link">Learn more</Button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* b */}
+
+          <div className={styles.top3}>
+            <div>
+              <div className={styles.header3}>
+                <h1>Scheduling that actually works</h1>
+                <p>
+                  Give everyone you work with—inside and outside your company—a
+                  more productive way to stay in sync. Respond faster with
+                  emoji, keep conversations focused in channels, and simplify
+                  all your communication into one place.
+                </p>
+                <div className={styles.learn}>
+                  <Button variant="link">Learn more</Button>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.lane}>
+              <img src={image3} />
+            </div>
           </div>
         </Container>
       </div>
@@ -74,43 +133,27 @@ export const HomePage = () => {
 
       <div className={styles.sectionTwo}>
         <Container>
-          <h1>What people say about us</h1>
-          <div className={styles.cards}>
-            <div
-              style={{
-                transform: `translateX(${-10 * pos}%)`,
-                transition: "300ms",
-              }}
-            >
-              {new Array(10).fill(0).map((_, index) => (
-                <Item rating={5} index={index} />
-              ))}
+          <div className={styles.title}>
+            <p>What people say about us</p>
+          </div>
+            <div className={styles.cards}>
+              <div
+                style={{
+                  transform: `translateX(${-10 * pos}%)`,
+                  transition: "300ms",
+                }}
+              >
+                {new Array(10).fill(0).map((_, index) => (
+                  <Item rating={5} index={index} />
+                ))}
+              </div>
             </div>
-          </div>
-          <div
-            style={{
-              position: "relative",
-              width: "fit-content",
-              bottom: 360,
-              left: 550,
-              cursor: "pointer",
-            }}
-            onClick={goLeft}
-          >
-            &#8592;
-          </div>
-          <div
-            style={{
-              width: "fit-content",
-              position: "relative",
-              bottom: 383,
-              left: 650,
-              cursor: "pointer",
-            }}
-            onClick={goRight}
-          >
-            &rarr;
-          </div>
+            <div onClick={goLeft} style={{ cursor: "pointer" }}>
+              &#8592;
+            </div>
+            <div onClick={goRight} style={{ cursor: "pointer", color: "blue" }}>
+              &rarr;
+            </div>
         </Container>
       </div>
 
@@ -126,7 +169,7 @@ const Item = (props) => {
   const greystar = Array(5 - props.rating).fill(0);
 
   return (
-    <Card style={{ width: 300, marginRight: 16 }}>
+    <Card style={{ width: 280, marginRight: 16 }}>
       <Card.Body>
         {stars.map(() => (
           <FaStar className={styles.star}></FaStar>
